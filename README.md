@@ -9,7 +9,7 @@
 
 ## 🧠 About Me
 
-AI Engineer and Computer Vision Expert with **15+ years of experience** in medical
+AI Engineer and Computer Vision Expert with **5+ years of experience** in medical
 imaging, petroleum data analysis, and AI software development. MSc in Photogrammetry
 and Image Processing from K.N. Toosi University of Technology.
 
