@@ -24,223 +24,100 @@ from research and model training to deployment and software integration.
 
 
 
-## 🏥 Featured Clinical AI Project | Automated Mammography Lesion Detection & BI-RADS-Guided Classification
+
+## 🏥 Featured Clinical AI Project | Intelligent Mammography Analysis & BI-RADS-Based Classification
 
 **Clinical Collaboration:** Razi Radiology Center — Dr. Vahid Alizadeh  
 **Joint Development:** AI-PACS & Iran Nobat | 2025  
-**Research Status:** Manuscript in preparation for journal submission
+**Research Status:** Ongoing Research — Publication in Preparation
 
 ### 🔬 Project Overview
 
-Developed and clinically demonstrated an **end-to-end AI-assisted mammography analysis system** in collaboration with **Dr. Vahid Alizadeh at Razi Radiology Center**.
+Developed and clinically demonstrated an **AI-powered mammography analysis and clinical decision-support system** in collaboration with **Dr. Vahid Alizadeh at Razi Radiology Center**.
 
-The system was designed to support radiologists in detecting **subtle and potentially overlooked breast abnormalities**, particularly small masses, suspicious calcifications, and focal asymmetries that can be challenging to identify through conventional visual examination.
+The project focuses on improving the detection of **subtle and potentially overlooked breast abnormalities**, including suspicious findings that may be challenging to recognize during routine mammographic interpretation.
 
-The framework integrates **deep learning-based lesion detection, candidate localization, multi-view mammographic analysis, and BI-RADS-guided multi-label classification**.
+The system provides:
 
-Unlike conventional binary cancer detection systems, this approach identifies and characterizes four mammographic finding categories:
+- **Automated breast abnormality detection**
+- **Localization of suspicious lesions**
+- **BI-RADS-guided mammographic finding classification**
+- **Visual identification of regions requiring further clinical attention**
+- **Confidence-based AI predictions**
+- **Integration with medical imaging workflows**
 
-- **Mass**
-- **Suspicious Calcification**
-- **Focal Asymmetry**
-- **No Finding**
-
-The system analyzes CC and MLO mammographic projections, identifies suspicious regions, generates visual bounding boxes with confidence scores, and provides interpretable classification results to assist radiological assessment.
+The objective is to support radiologists in identifying suspicious findings, improving screening efficiency, and providing an additional layer of AI-assisted image assessment.
 
 ### 🏥 Clinical Demonstration — Razi Radiology Center
 
-The following examples demonstrate AI-generated abnormality predictions and candidate lesion localization.
+The following images illustrate AI-assisted detection of potentially suspicious mammographic regions.
 
 <p align="center">
-  <img src="IMG-61795_pred.png" width="48%" alt="Mammography detection example 1" />
-  <img src="IMG-61797_pred.png" width="48%" alt="Mammography detection example 2" />
+  <img src="IMG-61795_pred.png" width="48%" alt="AI mammography detection" />
+  <img src="IMG-61797_pred.png" width="48%" alt="AI mammography analysis" />
 </p>
 
 <p align="center">
-  <img src="IMG-61799_pred.png" width="48%" alt="Mammography detection example 3" />
-  <img src="IMG-61801_pred.png" width="48%" alt="Mammography detection example 4" />
+  <img src="IMG-61799_pred.png" width="48%" alt="AI lesion localization" />
+  <img src="IMG-61801_pred.png" width="48%" alt="AI clinical screening" />
 </p>
 
 <p align="center">
-  <em>AI-assisted mammography analysis showing suspicious regions, candidate lesion localization, bounding boxes, and model confidence scores.</em>
+  <em>Examples of AI-assisted mammographic abnormality detection and candidate lesion localization.</em>
 </p>
 
-### ⚙️ Technical Architecture & Innovation
+### 📊 Performance & Clinical Evaluation
 
-A modular three-stage AI framework was developed for abnormality detection, radiological feature extraction, and multi-label classification.
+The system demonstrated **promising detection and classification performance** during experimental evaluation.
 
-**Stage 1 — Hybrid FCOS Detection**
+**Selected Research Highlights:**
 
-A customized FCOS detector incorporating a ResNet-50 backbone, Feature Pyramid Network (FPN), and auxiliary global classification head performs image-level abnormality detection and lesion localization.
+- **High abnormality detection accuracy:** Approximately 99% in the reported image-level evaluation.
+- **High detection precision:** Approximately 98% positive predictive value in the reported test.
+- **Strong sensitivity:** High sensitivity for identifying abnormal mammographic images.
+- **BI-RADS-guided classification:** Classification of multiple mammographic finding types.
+- **Subtle abnormality recognition:** Encouraging performance in identifying suspicious findings requiring closer examination.
 
-**Stage 2 — BI-RADS-Guided Feature Extraction**
+The project demonstrates the potential of AI to assist radiologists with early identification of suspicious mammographic abnormalities.
 
-Detected regions are characterized using quantitative radiological features:
+**Note:** Reported results are research-stage evaluation findings and do not establish independently validated clinical diagnostic performance.
 
-- Lesion shape, density, margins, and texture
-- Calcification distribution and clustering
-- CC/MLO cross-view consistency
-- Left-right breast asymmetry analysis
+### 🖥️ Clinical Software Demonstration
 
-**Stage 3 — Stacked XGBoost Classification**
-
-A multi-label XGBoost ensemble combines class-specific feature representations, probability calibration, and clinically constrained threshold optimization to classify mammographic findings.
-
-**Complete AI Processing Pipeline**
+The AI system was demonstrated within a medical imaging environment, providing automated abnormality predictions, visual localization, and interactive clinical image assessment.
 
 <p align="center">
-  <img src="paper_pipeline_overview.png" width="75%" alt="Mammography AI processing pipeline" />
+  <img src="msg39090518-6456.jpg" width="48%" alt="Clinical AI demonstration" />
 </p>
-
-**Hybrid FCOS Detection Architecture**
 
 <p align="center">
-  <img src="paper_hybrid_fcos_architecture.png" width="80%" alt="Hybrid FCOS architecture" />
+  <em>Clinical software demonstration at Razi Radiology Center.</em>
 </p>
 
-### 📊 Experimental Evaluation & Performance
+### 🎯 Clinical Impact & Research Contribution
 
-The system was evaluated on the **RSNA Screening Mammography dataset**, comprising **20,486 mammographic images**.
+This project represents a significant application of **Artificial Intelligence in medical imaging**, combining practical clinical collaboration with advanced AI development.
 
-| Dataset Split | Images |
-|---|---:|
-| Training | 16,391 |
-| Validation | 3,745 |
-| Independent Detection Test | 350 |
-| **Total** | **20,486** |
+Its primary contributions include:
 
-#### 1. Abnormality Detection Performance
+- Supporting radiologists in reviewing challenging mammographic findings.
+- Providing automated detection and visual localization of suspicious regions.
+- Supporting standardized breast imaging assessment.
+- Demonstrating AI integration into clinical imaging workflows.
+- Exploring the potential of intelligent screening assistance in radiology.
 
-The optimized Hybrid FCOS detection system achieved the following image-level results on the independent 350-image test set:
+The system is intended to **support radiologists rather than replace clinical judgment**. Further clinical validation is required before routine diagnostic use.
 
-| Evaluation Metric | Result |
-|---|---:|
-| **Accuracy** | **99.1%** |
-| **Precision (PPV)** | **97.8%** |
-| **Sensitivity (Recall)** | **100.0%** |
-| **Specificity** | **98.6%** |
-| **F1-Score** | **98.9%** |
+### 📄 Research & Publication
 
-These results demonstrate high sensitivity and precision for identifying mammographic images containing abnormalities under the reported test conditions.
+The technical methodology, experimental design, detailed evaluation results, and scientific contributions are currently being prepared for publication in a peer-reviewed journal.
 
-#### 2. Lesion Localization Performance
+**Detailed research information remains confidential pending publication.**
 
-Candidate lesion localization was evaluated using Intersection over Union (IoU).
+### 🛠️ Research Areas
 
-| Localization Metric | Result |
-|---|---:|
-| Detection Rate (IoU > 0) | 86.8% |
-| Detection Rate (IoU ≥ 0.3) | 60.3% |
-| Detection Rate (IoU ≥ 0.5) | 47.1% |
-| Mean IoU | 0.443 |
+**Medical Artificial Intelligence | Computer Vision | Mammography Analysis | Breast Lesion Detection | Medical Image Classification | Clinical Decision Support | Healthcare AI**
 
-The detector prioritizes high-sensitivity screening and candidate lesion discovery rather than exact boundary segmentation.
-
-**Lesion Localization Analysis**
-
-<p align="center">
-  <img src="paper_localization_iou.png" width="85%" alt="Lesion localization IoU analysis" />
-</p>
-
-#### 3. BI-RADS-Guided Classification Performance
-
-The optimized multi-view XGBoost classifier achieved:
-
-| Mammographic Finding | Sensitivity | Specificity | Precision (PPV) |
-|---|---:|---:|---:|
-| **Mass** | **87.3%** | 98.9% | 84.1% |
-| **Suspicious Calcification** | 82.4% | **99.6%** | **93.3%** |
-| **Focal Asymmetry** | 71.4% | 97.8% | 45.5% |
-| **No Finding** | **100.0%** | 84.1% | 97.3% |
-
-**Overall Multi-Label Classification Results**
-
-- **Micro F1-Score:** 98.1%
-- **Macro F1-Score:** 85.8%
-- **Mass Classification F1:** 87%
-- **Suspicious Calcification F1:** 82%
-- **Focal Asymmetry F1:** 73%
-
-**Classification Performance Analysis**
-
-<p align="center">
-  <img src="paper_classification_results.png" width="90%" alt="Multi-label classification performance" />
-</p>
-
-#### 4. Multi-View Analysis & Performance Improvement
-
-A comparative experiment evaluated four feature configurations.
-
-| Feature Configuration | Test Macro F1 |
-|---|---:|
-| Single-View | 74.5% |
-| **Multi-View (CC/MLO)** | **85.8%** |
-| Bilateral | 73.8% |
-| Combined | 84.1% |
-
-Multi-view feature integration substantially improved the classification of subtle mammographic findings.
-
-The most notable improvement occurred in **Focal Asymmetry**, where the F1-score increased from **42% to 73%**, representing approximately **74% relative improvement** compared with single-view analysis.
-
-This demonstrates the importance of cross-view consistency when identifying subtle density differences in mammographic examinations.
-
-**Multi-View Performance Comparison**
-
-<p align="center">
-  <img src="paper_multiview_performance.png" width="90%" alt="Multi-view mammography performance comparison" />
-</p>
-
-### 🖥️ Clinical Software Integration
-
-The AI workflow was demonstrated through a medical imaging interface supporting:
-
-- Mammographic image visualization
-- Automated abnormality detection
-- Candidate lesion localization
-- Confidence score visualization
-- BI-RADS-guided finding classification
-- Radiologist-assisted image review
-
-**Clinical Software Interface**
-
-<p align="center">
-  <img src="paper_clinical_interface.png" width="85%" alt="Mammography AI clinical software interface" />
-</p>
-
-**Clinical Demonstration at Razi Radiology Center**
-
-<p align="center">
-  <img src="msg39090518-6456.jpg" width="45%" alt="Clinical demonstration at Razi Radiology Center" />
-</p>
-
-### 🎯 Clinical Significance & Research Contributions
-
-The primary objective of this project is to improve mammographic screening support by helping radiologists identify suspicious abnormalities that may be difficult to recognize during routine examination.
-
-**Key Research Contributions**
-
-- Development of an end-to-end AI-assisted mammography analysis workflow.
-- High image-level abnormality detection sensitivity and precision on the evaluated dataset.
-- Visual localization of candidate suspicious lesions.
-- Multi-label classification aligned with BI-RADS finding terminology.
-- Improved focal asymmetry classification through CC/MLO multi-view analysis.
-- Interpretable model outputs for radiological review.
-- Clinical software demonstration at Razi Radiology Center.
-
-The system is designed as a **radiologist-assistance and clinical decision-support tool**, not an autonomous diagnostic replacement. Prospective clinical validation and radiologist comparison studies are required to establish real-world diagnostic effectiveness.
-
-### 📄 Scientific Research & Publication
-
-**Manuscript Title:**  
-*Automated Multi-View Mammography Analysis Using BI-RADS-Guided AI for Clinical Decision Support*
-
-**Authors:** Dr. Vahid Alizadeh, Asieh Rahimi, Dr. Bahareh Mobasheri
-
-**Publication Status:** Manuscript in preparation for submission to a peer-reviewed scientific journal.
-
-### 🛠️ Technologies & Methods
-
-**Python | PyTorch | Hybrid FCOS | ResNet-50 | Feature Pyramid Networks | XGBoost | Scikit-learn | DICOM | Medical Image Processing | Object Detection | Multi-Label Classification | Radiomics | BI-RADS-Guided Feature Engineering**
 
 
 -Evaluation & Fine-Tuning of Vision-Language Models for Medical Image Understanding
