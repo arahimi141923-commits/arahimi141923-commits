@@ -21,6 +21,28 @@ from research and model training to deployment and software integration.
 ## 🎯 Expertise
 
 ### 🏥 Medical AI
+-Automated Lumbar Vertebrae Segmentation & Classification Using Deep Learning
+
+Developed an AI-powered lumbar spine MRI analysis system using a customized U-Net deep learning architecture for automated vertebral segmentation, identification, and anatomical classification. The model processes 2D sagittal MRI images and incorporates specialized strategies to address class imbalance and improve segmentation performance. An integrated classification head was designed to identify individual lumbar vertebrae and assign their corresponding anatomical levels (L1–L5). The system generates individual color-coded segmentation masks with anatomical labels, enabling automated vertebral localization and identification. This project demonstrates the application of Deep Learning, Medical Image Segmentation, Computer Vision, and Anatomical Structure Recognition to support quantitative spinal imaging analysis.
+
+<h4>Automated Lumbar Spine MRI Analysis — Project Results</h4>
+
+<p align="center">
+  <img src="lumbar-mri.png"
+       alt="Original Lumbar Spine MRI"
+       width="46%" />
+  <img src="lumbar-segmentation.png"
+       alt="AI-Based Vertebral Segmentation and Classification"
+       width="46%" />
+</p>
+
+<p align="center">
+  <em>Original sagittal lumbar MRI (left) and
+  AI-generated color-coded vertebral segmentation (right).</em>
+</p>
+
+
+Technologies: Deep Learning | Customized U-Net | Medical Image Processing | Semantic Segmentation | Multi-Class Classification | Lumbar Spine MRI
 -AI-Assisted Goldmann Visual Field Analysis & Measurement Automation
 
 Collaborated with an ophthalmology specialist on an AI-based medical image analysis project focused on Goldmann visual field perimetry. The project aimed to automate the interpretation and quantitative measurement of ophthalmic diagnostic charts using Computer Vision, Image Processing, and Artificial Intelligence. The proposed solution focused on identifying coordinate systems, detecting colored isopters and visual field boundaries, extracting geometric features, and supporting automated measurements of visual field extent and irregularities. The objective was to reduce time-consuming manual measurements, improve analytical consistency, and support ophthalmologists in clinical assessment through AI-assisted image analysis.
