@@ -18,13 +18,13 @@ from research and model training to deployment and software integration.
 
 ---
 
-## 🎯 Expertise
+# 🎯 Expertise
 
-### 🏥 Medical AI
+# 🏥 Medical AI Projects:
 
 
 
-## 🏥 Featured Clinical AI Project | Intelligent Mammography Lesion Detection & BI-RADS-Guided Classification
+## 🏥 1-Featured Clinical AI Project | Intelligent Mammography Lesion Detection & BI-RADS-Guided Classification
 
 **Clinical Collaboration:** Razi Radiology Center — Dr. Vahid Alizadeh  
 **Joint Development:** AI-PACS & Iran Nobat | 2025  
@@ -171,13 +171,13 @@ A scientific manuscript describing the methodology, technical innovations, and d
 **Medical Artificial Intelligence | Mammography Analysis | Breast Lesion Detection | Medical Computer Vision | BI-RADS-Guided Classification | Clinical Decision Support | Medical Image Processing | Healthcare AI**
 
 
--Evaluation & Fine-Tuning of Vision-Language Models for Medical Image Understanding
+## 2-Evaluation & Fine-Tuning of Vision-Language Models for Medical Image Understanding
 
 Conducted experimental research on medical Vision-Language Models (VLMs) and Large Language Models (LLMs), focusing on multimodal medical image understanding, anatomical localization, disease interpretation, and automated radiology report generation. Evaluated and experimented with models including MedGemma, Gemma-based architectures, and PaliGemma-related object detection approaches, using brain imaging and chest CT datasets. Explored domain-specific fine-tuning strategies involving LoRA/PEFT, vision encoder adaptation, quantization, and image-text instruction tuning to improve medical image interpretation and structured clinical reporting. Investigated the ability of multimodal models to recognize abnormalities, identify anatomical regions, estimate spatial positions, and associate findings with their correct locations. Experiments revealed significant limitations in precise anatomical localization, spatial reasoning, and position-aware reporting, highlighting the challenges of applying general-purpose VLMs to detailed medical imaging tasks. This research provided hands-on experience in multimodal model evaluation, medical dataset preparation, fine-tuning, prompt engineering, and failure analysis, supporting the development of more reliable hybrid workflows combining specialized computer vision models with medical LLMs.
 
 Technologies: Python | PyTorch | Hugging Face Transformers | MedGemma | PaliGemma | Vision-Language Models | LoRA/PEFT | Quantization | Medical Image Analysis | Multimodal Fine-Tuning
 
--Automated Lumbar Disc Disease Detection, Classification & AI-Assisted Radiology Reporting
+## 3-Automated Lumbar Disc Disease Detection, Classification & AI-Assisted Radiology Reporting
 
 Developed an end-to-end deep learning pipeline for automated lumbar spine MRI analysis, integrating intervertebral disc localization, segmentation, and pathology classification using Vision Transformers (ViT), object detection, and multi-task deep learning architectures. The system analyzes sagittal and axial MRI images to identify lumbar disc levels (L1–L2 through L5–S1) and classify disc conditions into four categories: Normal, Bulging, Protrusion, and Extrusion, providing confidence scores and visual bounding-box annotations. The project incorporated DICOM–NIfTI image-mask alignment, class-imbalance optimization, and multi-task segmentation and classification. Additionally, MedGemma integration was explored to transform structured imaging findings into AI-generated radiology-style reports, supporting automated medical image interpretation and clinical decision-support workflows.
 Technologies: Python | PyTorch | Vision Transformers (ViT-B/16) | Object Detection | Medical Image Segmentation | DICOM | NIfTI | SimpleITK | MedGemma
@@ -202,7 +202,7 @@ Technologies: Python | PyTorch | Vision Transformers (ViT-B/16) | Object Detecti
   pathology labels, bounding boxes, and confidence scores.</em>
 </p>
 
--Automated Lumbar Vertebrae Segmentation & Classification Using Deep Learning
+## 4-Automated Lumbar Vertebrae Segmentation & Classification Using Deep Learning
 
 Developed an AI-powered lumbar spine MRI analysis system using a customized U-Net deep learning architecture for automated vertebral segmentation, identification, and anatomical classification. The model processes 2D sagittal MRI images and incorporates specialized strategies to address class imbalance and improve segmentation performance. An integrated classification head was designed to identify individual lumbar vertebrae and assign their corresponding anatomical levels (L1–L5). The system generates individual color-coded segmentation masks with anatomical labels, enabling automated vertebral localization and identification. This project demonstrates the application of Deep Learning, Medical Image Segmentation, Computer Vision, and Anatomical Structure Recognition to support quantitative spinal imaging analysis.
 
