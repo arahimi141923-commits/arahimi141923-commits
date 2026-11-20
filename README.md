@@ -24,100 +24,151 @@ from research and model training to deployment and software integration.
 
 
 
-
-## 🏥 Featured Clinical AI Project | Intelligent Mammography Analysis & BI-RADS-Based Classification
+## 🏥 Featured Clinical AI Project | Intelligent Mammography Lesion Detection & BI-RADS-Guided Classification
 
 **Clinical Collaboration:** Razi Radiology Center — Dr. Vahid Alizadeh  
 **Joint Development:** AI-PACS & Iran Nobat | 2025  
-**Research Status:** Ongoing Research — Publication in Preparation
+**Research Status:** Scientific Manuscript in Preparation for Journal Submission
 
 ### 🔬 Project Overview
 
-Developed and clinically demonstrated an **AI-powered mammography analysis and clinical decision-support system** in collaboration with **Dr. Vahid Alizadeh at Razi Radiology Center**.
+Developed and clinically demonstrated an **end-to-end Artificial Intelligence system for automated mammography analysis**, in collaboration with **Dr. Vahid Alizadeh at Razi Radiology Center**.
 
-The project focuses on improving the detection of **subtle and potentially overlooked breast abnormalities**, including suspicious findings that may be challenging to recognize during routine mammographic interpretation.
+The project focuses on the **early identification of suspicious breast abnormalities**, particularly subtle lesions that may be challenging to detect during conventional radiological interpretation.
 
-The system provides:
+The system combines intelligent image analysis, suspicious lesion localization, and **BI-RADS-guided multi-label classification**, providing radiologists with visual indications of potentially abnormal regions and associated prediction confidence scores.
 
-- **Automated breast abnormality detection**
-- **Localization of suspicious lesions**
-- **BI-RADS-guided mammographic finding classification**
-- **Visual identification of regions requiring further clinical attention**
-- **Confidence-based AI predictions**
-- **Integration with medical imaging workflows**
+Unlike conventional systems limited to normal-versus-abnormal classification, this solution recognizes multiple types of mammographic findings, including:
 
-The objective is to support radiologists in identifying suspicious findings, improving screening efficiency, and providing an additional layer of AI-assisted image assessment.
+- **Breast Masses**
+- **Suspicious Calcifications**
+- **Focal Asymmetries**
+- **Normal Mammographic Findings (No Finding)**
+
+The primary objective is to provide an additional layer of intelligent screening support, helping radiologists review challenging mammographic findings while maintaining clinical oversight.
 
 ### 🏥 Clinical Demonstration — Razi Radiology Center
 
-The following images illustrate AI-assisted detection of potentially suspicious mammographic regions.
+The following examples illustrate AI-generated abnormality detection and localization of suspicious breast regions.
 
 <p align="center">
-  <img src="IMG-61795_pred.png" width="48%" alt="AI mammography detection" />
-  <img src="IMG-61797_pred.png" width="48%" alt="AI mammography analysis" />
+  <img src="IMG-61795_pred.png" width="48%" alt="AI mammography abnormality detection" />
+  <img src="IMG-61797_pred.png" width="48%" alt="AI mammography lesion detection" />
 </p>
 
 <p align="center">
-  <img src="IMG-61799_pred.png" width="48%" alt="AI lesion localization" />
-  <img src="IMG-61801_pred.png" width="48%" alt="AI clinical screening" />
+  <img src="IMG-61799_pred.png" width="48%" alt="AI mammography suspicious region localization" />
+  <img src="IMG-61801_pred.png" width="48%" alt="AI breast lesion screening" />
 </p>
 
 <p align="center">
-  <em>Examples of AI-assisted mammographic abnormality detection and candidate lesion localization.</em>
+  <em>Clinical demonstration of AI-assisted mammographic lesion detection, visual localization, and confidence-based predictions.</em>
 </p>
 
-### 📊 Performance & Clinical Evaluation
+### 📊 Research Results & Diagnostic Performance
 
-The system demonstrated **promising detection and classification performance** during experimental evaluation.
+The developed system demonstrated **high performance in experimental mammography screening and abnormality identification**.
 
-**Selected Research Highlights:**
+#### 🎯 Abnormality Detection Performance
 
-- **High abnormality detection accuracy:** Approximately 99% in the reported image-level evaluation.
-- **High detection precision:** Approximately 98% positive predictive value in the reported test.
-- **Strong sensitivity:** High sensitivity for identifying abnormal mammographic images.
-- **BI-RADS-guided classification:** Classification of multiple mammographic finding types.
-- **Subtle abnormality recognition:** Encouraging performance in identifying suspicious findings requiring closer examination.
+| Performance Metric | Research Result |
+|---|---:|
+| **Detection Accuracy** | **99.1%** |
+| **Detection Precision (PPV)** | **97.8%** |
+| **Sensitivity (Recall)** | **100.0%** |
+| **Specificity** | **98.6%** |
+| **F1-Score** | **98.9%** |
 
-The project demonstrates the potential of AI to assist radiologists with early identification of suspicious mammographic abnormalities.
+These results reflect image-level normal/abnormal classification performance on the reported independent research test set, highlighting the system's potential for sensitive mammographic screening support.
 
-**Note:** Reported results are research-stage evaluation findings and do not establish independently validated clinical diagnostic performance.
+#### 🩺 Mammographic Finding Classification
 
-### 🖥️ Clinical Software Demonstration
+In addition to identifying abnormal images, the system was evaluated for its ability to distinguish different mammographic findings using BI-RADS-guided classification.
 
-The AI system was demonstrated within a medical imaging environment, providing automated abnormality predictions, visual localization, and interactive clinical image assessment.
+| Finding Category | Sensitivity | Specificity |
+|---|---:|---:|
+| **Breast Mass** | **87.3%** | **98.9%** |
+| **Suspicious Calcification** | **82.4%** | **99.6%** |
+| **Focal Asymmetry** | **71.4%** | **97.8%** |
+| **No Finding** | **100.0%** | **84.1%** |
+
+**Overall Multi-Label Classification Results:**
+
+- **Micro F1-Score: 98.1%**
+- **Macro F1-Score: 85.8%**
+- **Mass Classification F1: 87%**
+- **Suspicious Calcification F1: 82%**
+- **Focal Asymmetry F1: 73%**
+
+The results demonstrate the system's ability to support the identification and differentiation of multiple mammographic findings rather than providing only binary screening predictions.
+
+**Selected Classification Precision:**
+
+- **Mass:** 84.1%
+- **Suspicious Calcification:** 93.3%
+- **Focal Asymmetry:** 45.5%
+- **No Finding:** 97.3%
+
+These findings highlight strong performance for mass and suspicious calcification classification, while focal asymmetry remains a more challenging category requiring further improvement.
+
+### 🔍 Detection of Subtle Breast Abnormalities
+
+A central focus of this research was the identification of suspicious regions that may be difficult to recognize through routine visual examination.
+
+The AI system was designed to assist with:
+
+- Recognition of small or subtle mammographic abnormalities.
+- Localization of candidate suspicious breast lesions.
+- Identification of potentially concerning masses and calcification patterns.
+- Classification of focal asymmetries and other evaluated mammographic findings.
+- Highlighting regions that may require additional radiologist attention.
+
+The ability to combine abnormality detection with finding classification makes the system a promising tool for **AI-assisted breast screening and clinical decision support**.
+
+### 🖥️ Clinical Software Implementation
+
+The developed AI system was demonstrated within a clinical medical imaging environment, with capabilities including:
+
+- Automated mammography image analysis.
+- Suspicious region identification.
+- Lesion localization and bounding-box visualization.
+- Confidence-based prediction display.
+- Classification of mammographic findings.
+- Radiologist-assisted clinical review.
 
 <p align="center">
-  <img src="msg39090518-6456.jpg" width="48%" alt="Clinical AI demonstration" />
+  <img src="msg39090518-6456.jpg" width="48%" alt="Clinical AI software demonstration at Razi Radiology Center" />
 </p>
 
 <p align="center">
-  <em>Clinical software demonstration at Razi Radiology Center.</em>
+  <em>AI-powered mammography analysis demonstrated in a clinical imaging workflow at Razi Radiology Center.</em>
 </p>
 
-### 🎯 Clinical Impact & Research Contribution
+### 🎯 Clinical Significance
 
-This project represents a significant application of **Artificial Intelligence in medical imaging**, combining practical clinical collaboration with advanced AI development.
+This project represents a practical application of **Artificial Intelligence in Breast Imaging and Radiology**, combining advanced medical image analysis with real-world clinical collaboration.
 
-Its primary contributions include:
+**Key Achievements:**
 
-- Supporting radiologists in reviewing challenging mammographic findings.
-- Providing automated detection and visual localization of suspicious regions.
-- Supporting standardized breast imaging assessment.
-- Demonstrating AI integration into clinical imaging workflows.
-- Exploring the potential of intelligent screening assistance in radiology.
+- Developed an end-to-end AI-assisted mammography analysis workflow.
+- Achieved **99.1% image-level abnormality detection accuracy** in the reported research evaluation.
+- Demonstrated **97.8% detection precision and 100% sensitivity** under the evaluated test conditions.
+- Implemented detection and classification of multiple mammographic findings.
+- Achieved **99.6% specificity for suspicious calcification classification**.
+- Demonstrated visual candidate lesion localization and interpretable predictions.
+- Presented the software workflow in a clinical radiology environment.
 
-The system is intended to **support radiologists rather than replace clinical judgment**. Further clinical validation is required before routine diagnostic use.
+The system is designed to **assist radiologists, not replace their professional judgment**. Additional prospective evaluation and reader studies are required to establish improvements in real-world diagnostic outcomes.
 
-### 📄 Research & Publication
+### 📄 Research Publication
 
-The technical methodology, experimental design, detailed evaluation results, and scientific contributions are currently being prepared for publication in a peer-reviewed journal.
+A scientific manuscript describing the methodology, technical innovations, and detailed experimental evaluation is currently being prepared for submission to a peer-reviewed journal.
 
-**Detailed research information remains confidential pending publication.**
+**Research methods, model architecture, and unpublished technical details remain confidential pending publication.**
 
-### 🛠️ Research Areas
+### 🛠️ Expertise Demonstrated
 
-**Medical Artificial Intelligence | Computer Vision | Mammography Analysis | Breast Lesion Detection | Medical Image Classification | Clinical Decision Support | Healthcare AI**
-
+**Medical Artificial Intelligence | Mammography Analysis | Breast Lesion Detection | Medical Computer Vision | BI-RADS-Guided Classification | Clinical Decision Support | Medical Image Processing | Healthcare AI**
 
 
 -Evaluation & Fine-Tuning of Vision-Language Models for Medical Image Understanding
