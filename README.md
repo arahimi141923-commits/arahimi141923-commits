@@ -28,10 +28,10 @@ Collaborated with an ophthalmology specialist on an AI-based medical image analy
 <h4>Goldmann Visual Field Analysis — Project Images</h4>
 
 <p align="center">
-  <img src="goldmann-original.jpg"
+  <img src="goldmann-original.png"
        alt="Original Goldmann Visual Field"
        width="46%" />
-  <img src="goldmann-ai-analysis.jpg"
+  <img src="goldmann-ai-analysis.png"
        alt="AI-Assisted Visual Field Analysis"
        width="46%" />
 </p>
