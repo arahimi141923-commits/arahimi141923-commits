@@ -21,6 +21,26 @@ from research and model training to deployment and software integration.
 ## 🎯 Expertise
 
 ### 🏥 Medical AI
+-AI-Assisted Goldmann Visual Field Analysis & Measurement Automation
+
+Collaborated with an ophthalmology specialist on an AI-based medical image analysis project focused on Goldmann visual field perimetry. The project aimed to automate the interpretation and quantitative measurement of ophthalmic diagnostic charts using Computer Vision, Image Processing, and Artificial Intelligence. The proposed solution focused on identifying coordinate systems, detecting colored isopters and visual field boundaries, extracting geometric features, and supporting automated measurements of visual field extent and irregularities. The objective was to reduce time-consuming manual measurements, improve analytical consistency, and support ophthalmologists in clinical assessment through AI-assisted image analysis.
+
+<h4>Goldmann Visual Field Analysis — Project Images</h4>
+
+<p align="center">
+  <img src="goldmann-original.jpg"
+       alt="Original Goldmann Visual Field"
+       width="46%" />
+  <img src="goldmann-ai-analysis.jpg"
+       alt="AI-Assisted Visual Field Analysis"
+       width="46%" />
+</p>
+
+<p align="center">
+  <em>Original visual field chart (left) and
+  AI-assisted analysis (right).</em>
+</p>
+
 - Mammography AI pipeline — BI-RADS classification, 85–98% precision
 - Spine MRI segmentation — 85% Dice/IoU
 - Bone age estimation from MRI — ~3 month mean error (ages 7–14)
