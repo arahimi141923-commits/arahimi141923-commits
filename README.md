@@ -21,6 +21,31 @@ from research and model training to deployment and software integration.
 ## 🎯 Expertise
 
 ### 🏥 Medical AI
+-Automated Lumbar Disc Disease Detection, Classification & AI-Assisted Radiology Reporting
+
+Developed an end-to-end deep learning pipeline for automated lumbar spine MRI analysis, integrating intervertebral disc localization, segmentation, and pathology classification using Vision Transformers (ViT), object detection, and multi-task deep learning architectures. The system analyzes sagittal and axial MRI images to identify lumbar disc levels (L1–L2 through L5–S1) and classify disc conditions into four categories: Normal, Bulging, Protrusion, and Extrusion, providing confidence scores and visual bounding-box annotations. The project incorporated DICOM–NIfTI image-mask alignment, class-imbalance optimization, and multi-task segmentation and classification. Additionally, MedGemma integration was explored to transform structured imaging findings into AI-generated radiology-style reports, supporting automated medical image interpretation and clinical decision-support workflows.
+Technologies: Python | PyTorch | Vision Transformers (ViT-B/16) | Object Detection | Medical Image Segmentation | DICOM | NIfTI | SimpleITK | MedGemma
+
+<h4>Project Results — Lumbar Disc Disease Detection</h4>
+
+<p align="center">
+  <img src="IN7.1.3.12.2.1107.5.2.46.174759.2025042215232592237339269_pred.png"
+       alt="Sagittal MRI Disc Detection Example 1"
+       width="32%" />
+  <img src="IN7.1.3.12.2.1107.5.2.46.174759.2025050819132415023625248_pred.png"
+       alt="Sagittal MRI Disc Detection Example 2"
+       width="32%" />
+  <img src="msg39090518-6461.jpg"
+       alt="Axial MRI Disc Detection"
+       width="32%" />
+</p>
+
+<p align="center">
+  <em>AI-based lumbar disc detection and classification
+  on sagittal and axial MRI images, with predicted
+  pathology labels, bounding boxes, and confidence scores.</em>
+</p>
+
 -Automated Lumbar Vertebrae Segmentation & Classification Using Deep Learning
 
 Developed an AI-powered lumbar spine MRI analysis system using a customized U-Net deep learning architecture for automated vertebral segmentation, identification, and anatomical classification. The model processes 2D sagittal MRI images and incorporates specialized strategies to address class imbalance and improve segmentation performance. An integrated classification head was designed to identify individual lumbar vertebrae and assign their corresponding anatomical levels (L1–L5). The system generates individual color-coded segmentation masks with anatomical labels, enabling automated vertebral localization and identification. This project demonstrates the application of Deep Learning, Medical Image Segmentation, Computer Vision, and Anatomical Structure Recognition to support quantitative spinal imaging analysis.
